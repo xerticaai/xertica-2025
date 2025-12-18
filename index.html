@@ -1,51 +1,927 @@
-<!DOCTYPE html><html lang="pt-BR" class="scroll-smooth"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Relatório de Impacto 2025 | Xertica.ai</title>        <!-- Tailwind CSS -->    <script src="https://cdn.tailwindcss.com"></script>        <!-- Google Fonts -->    <link rel="preconnect" href="https://fonts.googleapis.com">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">        <!-- Material Symbols -->    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script>        tailwind.config = {            theme: {                extend: {                    fontFamily: {                        'poppins': ['Poppins', 'sans-serif'],                        'roboto': ['Roboto', 'sans-serif'],                    },                    colors: {                        brand: {                            blue: '#00BEFF',                            green: '#C0FF7D',                            pink: '#FF89FF',                            dark: '#050B14',                            surface: '#121A2B',                            text: '#EBFAFF'                        }                    },                    backgroundImage: {                        'gradient-brand': 'linear-gradient(90deg, #00BEFF 0%, #C0FF7D 100%)',                    }                }            }        }    </script>
-    <style>        body {            background-color: #050B14;            background-image: url('https://i.imgur.com/m70xN5H.png');            background-size: cover;            background-position: center;            background-attachment: fixed;            background-repeat: no-repeat;            color: #EBFAFF;            font-family: 'Roboto', sans-serif;            overflow-x: hidden;        }
-        /* Glassmorphism Refinado */        .glass-card {            background: rgba(18, 26, 43, 0.65); /* Levemente mais opaco para contraste */            backdrop-filter: blur(16px);            -webkit-backdrop-filter: blur(16px);            border: 1px solid rgba(0, 190, 255, 0.1);            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);            transition: transform 0.3s ease, border-color 0.3s ease;        }
-        .glass-card:hover {            border-color: rgba(0, 190, 255, 0.3);            transform: translateY(-2px);        }
-        /* Gradient Text Reforçado */        .text-gradient-primary {            background: linear-gradient(90deg, #00BEFF, #C0FF7D);            background-clip: text;            -webkit-background-clip: text;            -webkit-text-fill-color: transparent;            color: transparent;            font-weight: 700;        }                .text-gradient-pink {            background: linear-gradient(90deg, #FF89FF, #00BEFF);            background-clip: text;            -webkit-background-clip: text;            -webkit-text-fill-color: transparent;            color: transparent;            font-weight: 700;        }
-        /* Custom Scrollbar */        ::-webkit-scrollbar {            width: 8px;        }        ::-webkit-scrollbar-track {            background: #050B14;         }        ::-webkit-scrollbar-thumb {            background: #1e293b;             border-radius: 4px;        }        ::-webkit-scrollbar-thumb:hover {            background: #00BEFF;         }    </style></head><body class="antialiased min-h-screen flex flex-col relative">
-    <!-- Navbar Sticky -->    <nav class="sticky top-0 z-50 bg-[#050B14]/80 backdrop-blur-md border-b border-white/5">        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">            <div class="flex items-center justify-between h-16">                <!-- Logo -->                <div class="flex-shrink-0">                    <img src="https://storage.googleapis.com/etp-bucket/Logos%20Xertica.ai%20%28.png%29/xertica.ai/Copy%20of%20Logo_XERTICA_white.png"                        alt="Xertica.ai Logo"                        class="h-8 w-auto"                        onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">                    <h2 class="text-2xl font-bold text-white font-poppins hidden">Xertica<span class="text-brand-blue">.ai</span></h2>                </div>                <!-- Title -->                <div>                    <h1 class="font-poppins font-medium text-sm md:text-base text-white/80 tracking-tight">Nosso crescimento reflete na sociedade</h1>                </div>            </div>        </div>    </nav>
-    <!-- Main Content Wrapper -->    <main class="relative z-10 flex-grow py-8 px-4 sm:px-6 lg:px-8">        <div class="max-w-5xl mx-auto space-y-16">
-            <!-- ========================================== -->            <!-- SEÇÃO 1: HERO & GROWTH -->            <!-- ========================================== -->            <section class="space-y-8 animate-fade-in-up">                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">                    <div class="lg:col-span-7 space-y-6">                        <h2 class="font-poppins text-4xl md:text-5xl font-semibold text-white leading-tight">                            Relatório de Impacto da <br>                            <span class="text-gradient-primary">Xertica.ai em 2025</span>                        </h2>                        <p class="font-roboto text-brand-text/80 text-base leading-relaxed text-justify">                            Em 2025, a Xertica.ai consolidou sua liderança estratégica, ampliando a entrega de valor para instituições públicas críticas. Este desempenho reflete a robustez do nosso modelo de operação e o investimento maciço em capital intelectual especializado para solucionar desafios estruturais da região.                        </p>
-                        <!-- IMAGEM DE TOPO -->                        <div class="relative overflow-hidden rounded-xl shadow-2xl border border-brand-blue/20 group">                            <div class="absolute inset-0 bg-gradient-to-t from-[#050B14] via-transparent to-transparent opacity-60 z-10"></div>                            <img src="https://media.licdn.com/dms/image/v2/D4E22AQEIwMCUPSu0Yw/feedshare-shrink_800/B4EZnkdR6nKwAg-/0/1760474507557?e=2147483647&v=beta&t=5xHNBMnETLuRCYw1CXkZtvX6c-mjMHNQjuKaCwkZccE" alt="Equipe Xertica" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">                        </div>                    </div>
-                    <div class="lg:col-span-5 flex flex-col gap-4">                        <!-- CARD CRESCIMENTO -->                        <div class="glass-card rounded-xl p-6 border-l-4 border-l-brand-blue relative overflow-hidden group">                            <div class="absolute right-4 top-4">                                <span class="material-symbols-outlined text-4xl text-brand-blue">trending_up</span>                            </div>                                                        <div class="mb-4">                                <span class="font-roboto text-xs text-brand-blue uppercase font-bold tracking-wider block mb-2">Nosso crescimento de receita em 2025</span>                                <p class="font-roboto text-[11px] text-white/80 leading-snug pr-8">                                    Nossa solidez financeira garante a perenidade de projetos essenciais e amplia nossa capacidade de reinvestimento em tecnologias de impacto social.                                </p>                            </div>
-                            <div class="grid grid-cols-2 gap-3">                                <!-- Gross -->                                <div class="bg-brand-surface/50 border border-brand-blue/20 rounded-lg p-3 flex flex-col justify-center items-center text-center hover:bg-brand-blue/10 transition-colors">                                    <span class="font-roboto text-[10px] text-brand-text/60 uppercase font-bold tracking-wider block mb-1">Gross Rev.</span>                                    <span class="font-poppins text-3xl font-bold text-white leading-none">+98%</span>                                </div>                                                                <!-- Net -->                                <div class="bg-brand-surface/50 border border-brand-blue/20 rounded-lg p-3 flex flex-col justify-center items-center text-center hover:bg-brand-blue/10 transition-colors">                                    <span class="font-roboto text-[10px] text-brand-text/60 uppercase font-bold tracking-wider block mb-1">Net Rev.</span>                                    <span class="font-poppins text-3xl font-bold text-white leading-none">+36%</span>                                </div>                            </div>                        </div>                                                <!-- CARD NOVOS TALENTOS -->                        <div class="glass-card rounded-xl p-6 border-l-4 border-l-brand-pink relative overflow-hidden group">                            <div class="absolute right-4 top-4">                                <span class="material-symbols-outlined text-4xl text-brand-pink drop-shadow-md">groups</span>                            </div>                            <span class="font-roboto text-xs text-brand-pink uppercase font-bold tracking-wider block mb-1">Novos Talentos</span>                            <h4 class="font-poppins text-xl font-bold text-white leading-tight mb-3 pr-10">                                Expansão da nossa força de trabalho                            </h4>                            <div class="space-y-2">                                <p class="font-roboto text-sm text-brand-text/80 leading-relaxed text-justify">                                    Aumentamos nossa equipe em <span class="text-4xl font-bold text-brand-green font-poppins align-middle mx-1 block my-2">95,5%</span>                                    Esse movimento estratégico impulsiona a geração de empregos qualificados e fomenta a economia do conhecimento, inserindo novos especialistas na vanguarda da transformação digital pública. Isso é importante porque tecnologia não se faz apenas com máquinas; se faz com pessoas. Trouxemos novos talentos para a transformar e modernizar muitos projetos ambiciosos, gerando empregos qualificados para a sociedade e fechando o segundo ano fiscal de operação no Brasil com <span class="text-brand-green font-bold">129 postos ocupados</span>.                                </p>                            </div>                        </div>                    </div>                </div>            </section>
-            <!-- ========================================== -->            <!-- SEÇÃO 2: QUALIFICAÇÃO -->            <!-- ========================================== -->            <section class="glass-card rounded-2xl p-8 border-t-4 border-t-brand-pink relative overflow-hidden">                <div class="absolute bottom-0 right-0 w-64 h-64 bg-brand-pink/10 rounded-full blur-3xl pointer-events-none -mr-10 -mb-10"></div>                                <div class="flex items-center gap-3 mb-6 border-b border-brand-text/10 pb-4">                    <span class="material-symbols-outlined text-brand-pink text-3xl">school</span>                    <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Qualificação</h3>                </div>                                <!-- TEXTO INTRODUTÓRIO -->                <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify mb-8 max-w-4xl">                    Acreditamos que o conhecimento é a base da inovação. Por isso, investimos continuamente na qualificação e certificação de nossos colaboradores, elevando o padrão técnico de nossas entregas e contribuindo para o desenvolvimento tecnológico da sociedade.                </p>
-                <!-- GRID BALANCEADO (INTERNA vs EXTERNA) -->                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:divide-x lg:divide-white/10">                                        <!-- COLUNA 1: QUALIFICAÇÃO INTERNA -->                    <div class="flex flex-col gap-6 lg:pr-8 pb-8 lg:pb-0 border-b lg:border-b-0 border-white/10">                        <div>                            <h4 class="font-poppins text-sm font-bold text-brand-pink uppercase mb-2 tracking-wider flex items-center gap-2">                                <span class="material-symbols-outlined text-lg">cast_for_education</span> Qualificação Interna                            </h4>                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                Disponibilizamos treinamentos avançados para elevar nosso domínio em tecnologias Google, especializando nosso time constantemente.                            </p>                        </div>
-                        <div class="grid grid-cols-2 gap-4">                            <!-- Box Treinamentos -->                            <div class="bg-brand-surface/40 rounded-lg p-4 border border-brand-pink/20 flex flex-col justify-center items-center text-center">                                <span class="text-3xl font-bold text-white font-poppins mb-1">43</span>                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Treinamentos</span>                                <span class="text-2xl font-bold text-brand-pink font-poppins mt-3 mb-1">1.419</span>                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Horas Consumidas</span>                            </div>
-                            <!-- Box Certificações -->                            <div class="bg-brand-surface/40 rounded-lg p-4 border border-brand-blue/20 flex flex-col justify-center items-center text-center">                                <span class="text-3xl font-bold text-white font-poppins mb-1">550</span>                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Certificações</span>                                <span class="text-2xl font-bold text-brand-blue font-poppins mt-3 mb-1">33k+</span>                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Horas Consumidas</span>                            </div>                        </div>                    </div>
-                    <!-- COLUNA 2: QUALIFICAÇÃO EXTERNA -->                    <div class="flex flex-col gap-6 lg:pl-8 pt-8 lg:pt-0">                        <div>                            <h4 class="font-poppins text-sm font-bold text-brand-green uppercase mb-2 tracking-wider flex items-center gap-2">                                <span class="material-symbols-outlined text-lg">public</span> Qualificação Externa                            </h4>                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                Eventos, Webinars e Treinamentos abertos ao público, reforçando nosso impacto na comunidade tech e compartilhando conhecimento estratégico.                            </p>                        </div>
-                        <div class="grid grid-cols-2 gap-4">                            <!-- Box Eventos -->                            <div class="bg-brand-surface/40 rounded-lg p-4 border border-brand-green/20 flex flex-col justify-center items-center text-center relative overflow-hidden">                                <div class="absolute top-0 left-0 w-full h-1 bg-brand-green/30"></div>                                <span class="text-[9px] text-brand-green uppercase font-bold tracking-wider mb-2">Eventos / Webinars</span>                                <span class="text-3xl font-bold text-white font-poppins mb-1">1021</span>                                <span class="text-[9px] text-brand-text/60 uppercase font-bold tracking-wider mb-2">Pessoas Impactadas</span>                                <span class="text-xl font-bold text-white font-poppins mb-0">11.741</span>                                <span class="text-[9px] text-brand-text/60 uppercase font-bold tracking-wider">Horas Consumidas</span>                            </div>
-                            <!-- Box CS -->                            <div class="bg-brand-surface/40 rounded-lg p-4 border border-brand-blue/20 flex flex-col justify-center items-center text-center relative overflow-hidden">                                <div class="absolute top-0 left-0 w-full h-1 bg-brand-blue/30"></div>                                <span class="text-[9px] text-brand-blue uppercase font-bold tracking-wider mb-2">Treinamento Clientes</span>                                <span class="text-3xl font-bold text-white font-poppins mb-1">+200</span>                                <span class="text-[9px] text-brand-text/60 uppercase font-bold tracking-wider mb-2">Pessoas Impactadas</span>                                <span class="text-xl font-bold text-white font-poppins mb-0">4.800</span>                                <span class="text-[9px] text-brand-text/60 uppercase font-bold tracking-wider">Horas Consumidas</span>                            </div>                        </div>                    </div>                </div>            </section>
-            <!-- ========================================== -->            <!-- SEÇÃO 3: HISTÓRIAS DE IMPACTO -->            <!-- ========================================== -->            <section>                <div class="flex flex-col mb-6">                    <div class="flex items-center gap-3 mb-2">                        <span class="material-symbols-outlined text-brand-green text-3xl">verified</span>                        <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Histórias de Impacto</h3>                    </div>                    <p class="font-roboto text-sm text-brand-text/60 ml-10">                        Histórias que impactam a sociedade, bem como cidadãos e serviços públicos.                    </p>                    <div class="h-[1px] bg-brand-blue/20 w-full mt-4"></div>                </div>
-                <div class="grid grid-cols-1 gap-8">                                        <!-- CASE CDHU -->                    <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-pink relative overflow-hidden">                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-pink/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>                        <div class="flex flex-col md:flex-row md:items-start justify-between mb-6 relative z-10 gap-4">                            <div class="flex-1">                                <div class="flex items-center gap-4 mb-3 flex-wrap">                                    <!-- LOGO CDHU -->                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7wRHKjCgCcDHbHMvxDTGjnKUdCfjp8cdunQ&s" alt="CDHU Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">                                    <span class="bg-brand-pink/10 text-brand-pink text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-pink/20">Habitação</span>                                    <h4 class="font-poppins text-xl font-bold text-white">CDHU: Prevenção Geoespacial</h4>                                </div>                                <p class="font-roboto text-sm text-white/90 leading-relaxed">Com IA, reduzimos riscos de deslizamentos e inundações ao analisar automaticamente o território, permitindo intervenções mais rápidas e eficazes para proteger famílias em áreas vulneráveis.</p>                            </div>                        </div>                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 border-t border-brand-pink/10 pt-6">                            <div class="space-y-2">                                <div class="flex items-center gap-2 text-brand-pink">                                    <span class="material-symbols-outlined text-base">warning</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    A Xertica analisou a dificuldade da CDHU em gerir informações contidas em **oito bancos de dados diferentes**. A solução proposta não apenas os integrou, mas utilizou o Google Earth Engine (GEE) e IA para analisar o terreno e **prever riscos de desabamentos e inundações** nas áreas urbanizadas.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-pink/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-blue">                                    <span class="material-symbols-outlined text-base">psychology</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    O escopo consistiu em **identificar propriedades em áreas de risco** (inundações, deslizamentos) e fornecer dados sobre serviços essenciais próximos (escolas, hospitais, transporte). Realiza a **interseção de informações georreferenciadas** com metadados administrativos e financeiros.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-pink/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-green">                                    <span class="material-symbols-outlined text-base">check_circle</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    A CDHU obteve uma **visão ampla de seus empreendimentos** em relação a áreas de risco e à situação financeira de cada um. Os insights sobre a infraestrutura ao redor agora orientam **políticas públicas** nas áreas de infraestrutura urbana, saúde e educação.                                </p>                            </div>                        </div>                    </article>
-                    <!-- CASE HEMOMINAS -->                    <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-pink relative overflow-hidden">                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-pink/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>                        <div class="flex flex-col md:flex-row md:items-start justify-between mb-6 relative z-10 gap-4">                            <div class="flex-1">                                <div class="flex items-center gap-4 mb-3 flex-wrap">                                    <!-- LOGO HEMOMINAS -->                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Fundacao-hemominas.jpg" alt="Hemominas Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">                                    <span class="bg-brand-pink/10 text-brand-pink text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-pink/20">Saúde Pública</span>                                    <h4 class="font-poppins text-xl font-bold text-white">Fundação Hemominas: Convocação Inteligente de Doadores</h4>                                </div>                                <p class="font-roboto text-sm text-white/90 leading-relaxed">Ao automatizar a convocação e o atendimento aos doadores, nossa IA reduz drasticamente o tempo de espera e fortaleceu a segurança do estoque de sangue, beneficiando diretamente a população.</p>                            </div>                        </div>                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 border-t border-brand-pink/10 pt-6">                            <div class="space-y-2">                                <div class="flex items-center gap-2 text-brand-pink">                                    <span class="material-symbols-outlined text-base">warning</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    Simplificar o processo de doação de sangue, que é complexo e demorado, reduzindo o tempo de espera dos doadores. Isso exigia integrações aprofundadas com os sistemas atuais, ajustes de API e serviços web para fornecer informações precisas e em tempo real.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-pink/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-blue">                                    <span class="material-symbols-outlined text-base">psychology</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    Implementação de um **Assistente de IA Conversacional** desenvolvido com Google Cloud Contact Center Artificial Intelligence (CCAI) e Vertex AI. O assistente automatiza tarefas repetitivas como agendamento de consultas e triagem de doadores, fornecendo informações precisas e em tempo real.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-pink/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-green">                                    <span class="material-symbols-outlined text-base">check_circle</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    O robô de coleta de sangue, disponível no site da Hemominas, contribuiu para **reduzir drasticamente os tempos de espera** no processo de doação. Ele proporcionou maior acessibilidade às informações e aumentou a eficiência geral do sistema.                                </p>                            </div>                        </div>                    </article>
-                    <!-- CASE SEMAD -->                    <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-green relative overflow-hidden">                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>                        <div class="flex flex-col md:flex-row md:items-start justify-between mb-6 relative z-10 gap-4">                            <div class="flex-1">                                <div class="flex items-center gap-4 mb-3 flex-wrap">                                    <!-- LOGO SEMAD -->                                    <img src="https://static.wixstatic.com/media/8307fe_1961d2cd7911448bb6e7299c434f4144~mv2.jpg/v1/fill/w_1000,h_736,al_c,q_85,usm_0.66_1.00_0.01/8307fe_1961d2cd7911448bb6e7299c434f4144~mv2.jpg" alt="SEMAD Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">                                    <span class="bg-brand-green/10 text-brand-green text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-green/20">Meio Ambiente</span>                                    <h4 class="font-poppins text-xl font-bold text-white">SEMAD (MG): Modernização e Sustentabilidade</h4>                                </div>                                <p class="font-roboto text-sm text-white/90 leading-relaxed">Ao destravar um passivo histórico de 65 mil processos ambientais, nossa IA ajudou o Estado a combater a impunidade e fortalecer a proteção ambiental para toda a população.</p>                            </div>                        </div>                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 border-t border-brand-green/10 pt-6">                            <div class="space-y-2">                                <div class="flex items-center gap-2 text-brand-pink">                                    <span class="material-symbols-outlined text-base">warning</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    Minas Gerais enfrentava uma crise com 65.000 autos de infração em papel acumulados. A equipe reduzida não conseguia processar o volume manualmente, resultando na prescrição de crimes, impunidade e perda de arrecadação.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-blue">                                    <span class="material-symbols-outlined text-base">psychology</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    Implementação do SIA (IA + Google Cloud) com OCR para leitura de documentos e triagem automática de infrações e valores. O sistema redige minutas de decisão para casos padronizados, exigindo apenas a validação final do servidor.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-green">                                    <span class="material-symbols-outlined text-base">check_circle</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    Processos que levavam dias agora são triados em segundos. O sistema limpou o passivo histórico de 65.000 processos (algo que levaria anos manualmente) e reduziu drasticamente o tempo de tramitação administrativa.                                </p>                            </div>                        </div>                    </article>
-                </div>            </section>
-            <!-- ========================================== -->            <!-- SEÇÃO 4: JUSTIÇA E GOVERNO -->            <!-- ========================================== -->            <section class="space-y-8">                                <!-- CARD UNIFICADO: JUSTIÇA (MPRS + TJES) -->                <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-blue relative overflow-hidden">                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>
-                    <div class="flex items-center gap-3 mb-8 border-b border-brand-blue/20 pb-4">                        <span class="bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-blue/20">Justiça</span>                        <h3 class="font-poppins text-xl font-bold text-white uppercase tracking-wide">Transformação do Judiciário</h3>                    </div>
-                    <!-- MPRS -->                    <div class="relative z-10 mb-10">                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">                            <div class="flex-1 flex items-center gap-4">                                <!-- LOGO MPRS -->                                <img src="https://i.ytimg.com/vi/6SFAl_DjVlA/maxresdefault.jpg" alt="MPRS Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">                                <h4 class="font-poppins text-xl font-bold text-white">MPRS: Justiça Acelerada por IA</h4>                            </div>                        </div>                        <p class="font-roboto text-sm text-white mt-1 mb-6">Ao automatizar transcrições, buscas de endereços e análises jurídicas no MPRS, nossa IA reduz filas processuais e melhora o atendimento ao público com respostas muito mais rápidas.</p>                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-brand-blue/10 pt-6">                            <div class="space-y-2">                                <div class="flex items-center gap-2 text-brand-pink">                                    <span class="material-symbols-outlined text-base">warning</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    O Ministério Público enfrentava desafios na gestão de processos devido à complexidade e ao volume de demandas. A execução manual de tarefas como transcrições de audiências e buscas de endereços era onerosa e lenta.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-blue">                                    <span class="material-symbols-outlined text-base">psychology</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    A Xertica.ai desenvolveu uma solução com quatro verticais: transcrição de áudio, busca de endereços, consultas semânticas e elaboração automática de documentos jurídicos, tudo centralizado e baseado em IA.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-green">                                    <span class="material-symbols-outlined text-base">check_circle</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    A solução reduziu significativamente o tempo dos processos, transformando tarefas de meses em horas. Liberou recursos valiosos para casos prioritários e acelerou a resolução de casos para a população.                                </p>                            </div>                        </div>                    </div>
-                    <div class="h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent w-full my-8"></div>
-                    <!-- TJES -->                    <div class="relative z-10">                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">                            <div class="flex items-center gap-4">                                <!-- LOGO TJES -->                                <img src="https://yt3.googleusercontent.com/g4gJe7-x9wMu7ihO4dLeBtx3_b1ihKdmfzObXnjTtGpfuv5NoOAQmEoxqZmCEO-x1Vc0udxh3g=s900-c-k-c0x00ffffff-no-rj" alt="TJES Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">                                <h4 class="font-poppins text-xl font-bold text-white">TJES: Inovação na Gestão Processual</h4>                            </div>                        </div>                        <p class="font-roboto text-sm text-white mt-1 mb-6 max-w-2xl">Ao reduzir drasticamente o tempo de análise de audiências, nossa IA acelerou decisões que impactam diretamente a vida do cidadão, promovendo uma Justiça mais rápida, acessível e menos burocrática.</p>                                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-brand-blue/10 pt-6">                            <div class="space-y-2">                                <div class="flex items-center gap-2 text-brand-pink">                                    <span class="material-symbols-outlined text-base">warning</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    O TJES enfrentava ineficiência com processos levando anos. A dependência de tarefas manuais, como transcrições demoradas, elevava custos. A falta de busca robusta de precedentes comprometia a padronização.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-blue">                                    <span class="material-symbols-outlined text-base">psychology</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    Implementação de solução de IA para transcrição e análise de vídeos. A tecnologia reduziu o tempo de revisão de audiências de 3 horas para 30 minutos, garantindo agilidade nas alegações finais.                                </p>                            </div>                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">                                <div class="flex items-center gap-2 text-brand-green">                                    <span class="material-symbols-outlined text-base">check_circle</span>                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>                                </div>                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                    Integração segura de IA em Google Cloud com sistemas legados e plataforma do CNJ. Estratégia de MVP validou eficácia no gargalo de transcrições, unindo inovação à linguagem jurídica.                                </p>                            </div>                        </div>                    </div>                </article>
-                <!-- CASE GOVERNO MT -->                <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-green relative overflow-hidden">                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>                    <div class="flex flex-col mb-6 relative z-10">                        <div class="flex items-center gap-3 mb-2 flex-wrap">                            <!-- LOGO GOV MT -->                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaY9B35gyu5d5f4uLhUTMHa-DLQRyGnVpEZw&s" alt="Governo MT Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">                            <span class="bg-brand-green/10 text-brand-green text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-green/20">Gestão Pública</span>                            <h4 class="font-poppins text-xl font-bold text-white">Governo Mato Grosso: Transparência Ativa</h4>                        </div>                        <p class="font-roboto text-sm text-white max-w-3xl">Ao possibilitar consultas em linguagem natural, nossa IA democratizou o acesso às informações públicas e ampliou a transparência.</p>                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 border-t border-brand-green/10 pt-6">                        <div class="space-y-2">                            <div class="flex items-center gap-2 text-brand-pink">                                <span class="material-symbols-outlined text-base">warning</span>                                <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>                            </div>                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                O principal obstáculo era a inacessibilidade do RAG. Considerado denso e burocrático, o documento gerava excesso de dados sem uso estratégico para gestores e dificultava o acompanhamento pela sociedade.                            </p>                        </div>                        <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">                            <div class="flex items-center gap-2 text-brand-blue">                                <span class="material-symbols-outlined text-base">psychology</span>                                <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>                            </div>                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                A Xertica implementou o <strong>Avalia Gov.MT</strong>, unindo dashboards interativos e um chatbot de IA no Google Cloud. A solução transformou o RAG em um portal vivo e estratégico, permitindo consultas em linguagem natural.                            </p>                        </div>                        <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">                            <div class="flex items-center gap-2 text-brand-green">                                <span class="material-symbols-outlined text-base">check_circle</span>                                <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>                            </div>                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                Agilidade com consultas instantâneas, liberando servidores. Gestores agora decidem com base em dados claros. Cidadãos acompanham políticas com transparência.                            </p>                        </div>                    </div>                </article>            </section>
-            <!-- ========================================== -->            <!-- NOVA SESSÃO 1: INTELIGÊNCIA ARTIFICIAL PARA O BEM SOCIAL -->            <!-- ========================================== -->            <section class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-pink relative overflow-hidden">                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-pink/10 rounded-full blur-2xl"></div>                <div class="relative z-10">                    <div class="flex items-center gap-3 mb-4">                        <span class="material-symbols-outlined text-brand-pink text-3xl">volunteer_activism</span>                        <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Inteligência Artificial como Agente de Transformação Social</h3>                    </div>                    <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify">                        Acreditamos que a tecnologia só tem sentido quando melhora a vida das pessoas. Nossa IA não substitui o humano, ela o empodera. Ao analisar grandes volumes de dados, permitimos que gestores públicos tomem decisões proativas, não reativas. Isso se traduz em menos filas em hospitais, escolas melhor alocadas, prevenção de desastres e, fundamentalmente, na garantia de direitos básicos para o cidadão.                    </p>                </div>            </section>
-            <!-- ========================================== -->            <!-- NOVA SESSÃO 2: EFICIÊNCIA ESTATAL (JUSTIÇA/GOVERNO) -->            <!-- ========================================== -->            <section class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-blue relative overflow-hidden">                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-blue/10 rounded-full blur-2xl"></div>                <div class="relative z-10">                    <div class="flex items-center gap-3 mb-4">                        <span class="material-symbols-outlined text-brand-blue text-3xl">balance</span>                        <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Eficiência Estatal: Justiça e Governo Ágeis</h3>                    </div>                    <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify">                        O gargalo do Estado muitas vezes não é a falta de vontade, é a capacidade de processamento. Nossas soluções de IA Generativa leem, interpretam e triam documentos jurídicos e administrativos em segundos. Na Justiça, isso reduz o tempo de decisão de anos para dias, combatendo a impunidade e garantindo a celeridade processual. No Governo, elimina a burocracia do papel e gargalos administrativos, permitindo uma gestão transparente, auditável e que responde na velocidade das demandas reais da sociedade.                    </p>                </div>            </section>
-            <!-- ========================================== -->            <!-- SEÇÃO 5: RECONHECIMENTO & MÍDIA -->            <!-- ========================================== -->            <section class="space-y-8">                <header class="border-b border-brand-blue/20 pb-4">                    <h2 class="text-3xl font-bold text-white font-poppins">Reconhecimento e Mídia<span class="text-brand-blue">.</span></h2>                </header>
-                <!-- MOSAICO REFORMULADO (DESTAQUES RÁPIDOS) -->                <div class="glass-card rounded-2xl p-6 relative overflow-hidden">                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-blue/20 blur-[50px] rounded-full pointer-events-none"></div>                    <div class="flex items-center gap-2 mb-6 relative z-10">                        <span class="material-symbols-outlined text-brand-blue text-2xl">hub</span>                        <h3 class="font-poppins text-lg font-bold text-white uppercase tracking-wide">Destaques de Inovação</h3>                    </div>                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">                        <!-- Card 1 -->                        <div class="bg-brand-surface/60 border border-brand-blue/20 rounded-xl p-4 flex flex-col items-center text-center gap-2 hover:bg-brand-blue/10 transition-colors">                            <span class="material-symbols-outlined text-brand-blue text-3xl">forum</span>                            <h5 class="font-poppins font-bold text-white text-sm">Transparência Radical</h5>                            <span class="text-[10px] uppercase font-bold text-brand-text/50">Gov.MT</span>                            <p class="font-roboto text-xs text-brand-text/80 mt-1">Chatbot de Cidadania com 89,4% de aprovação.</p>                        </div>                        <!-- Card 2 -->                        <div class="bg-brand-surface/60 border border-brand-pink/20 rounded-xl p-4 flex flex-col items-center text-center gap-2 hover:bg-brand-pink/10 transition-colors">                            <span class="material-symbols-outlined text-brand-pink text-3xl">satellite_alt</span>                            <h5 class="font-poppins font-bold text-white text-sm">Segurança Inteligente</h5>                            <span class="text-[10px] uppercase font-bold text-brand-text/50">MPMT</span>                            <p class="font-roboto text-xs text-brand-text/80 mt-1">Predição de crime via satélite e mapas.</p>                        </div>                        <!-- Card 3 -->                        <div class="bg-brand-surface/60 border border-brand-green/20 rounded-xl p-4 flex flex-col items-center text-center gap-2 hover:bg-brand-green/10 transition-colors">                            <span class="material-symbols-outlined text-brand-green text-3xl">eco</span>                            <h5 class="font-poppins font-bold text-white text-sm">Agilidade Ambiental</h5>                            <span class="text-[10px] uppercase font-bold text-brand-text/50">SEMAD</span>                            <p class="font-roboto text-xs text-brand-text/80 mt-1">Risco de prescrição eliminado. SLA reduzido para 5 dias.</p>                        </div>                        <!-- Card 4 -->                        <div class="bg-brand-surface/60 border border-brand-green/20 rounded-xl p-4 flex flex-col items-center text-center gap-2 hover:bg-brand-green/10 transition-colors">                            <span class="material-symbols-outlined text-brand-green text-3xl">analytics</span>                            <h5 class="font-poppins font-bold text-white text-sm">Análise Educacional</h5>                            <span class="text-[10px] uppercase font-bold text-brand-text/50">SAEB</span>                            <p class="font-roboto text-xs text-brand-text/80 mt-1">Predição de desempenho e otimização de recursos.</p>                        </div>                    </div>                </div>
-                <!-- PRÊMIO ISG (IMAGENS MAIORES) -->                <div class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-pink relative overflow-hidden">                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-pink/10 rounded-full blur-2xl"></div>                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative z-10">                        <div class="md:col-span-8">                            <h4 class="font-poppins text-2xl font-bold text-white leading-tight mb-6">                                Xertica é reconhecida como <span class="text-gradient-pink">Líder</span> em 3 quadrantes estratégicos da ISG.                            </h4>                            <div class="flex flex-wrap items-center gap-4 mb-6 pb-6 border-b border-brand-pink/10">                                <div class="bg-brand-surface/70 border border-brand-pink/20 rounded-lg p-3 shadow-lg hover:scale-105 transition-transform">                                    <img src="https://hvarconsulting.com.br/wp-content/uploads/2025/08/Google-Cloud-GenAI-and-AI-Services_Leader.png" alt="Selo ISG Provider Lens" class="h-20 w-auto object-contain">                                </div>                                <div class="bg-brand-surface/70 border border-brand-pink/20 rounded-lg p-3 shadow-lg hover:scale-105 transition-transform">                                    <img src="https://i.imgur.com/z41KPIH.png" alt="Selo ISG Provider Lens" class="h-20 w-auto object-contain">                                </div>                                <div class="bg-brand-surface/70 border border-brand-pink/20 rounded-lg p-3 shadow-lg hover:scale-105 transition-transform">                                    <img src="https://i.imgur.com/SXPkzJp.png" alt="Selo ISG Provider Lens" class="h-20 w-auto object-contain">                                </div>                            </div>                            <div class="space-y-4">                                <p class="font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">                                    A Xertica foi reconhecida como Líder em três quadrantes estratégicos no estudo <strong>ISG Provider Lens™ 2025 – Google Cloud Partner Ecosystem</strong> no Brasil.                                </p>                                <p class="font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">                                    Este reconhecimento reforça nossa excelência em soluções Google Cloud, nossa capacidade de entregar valor real aos clientes e o compromisso contínuo com inovação, desempenho e especialização técnica.                                </p>                                <p class="font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">                                    Ser <strong>3x Líder</strong> consolida nossa posição como um dos principais parceiros de transformação digital do país.                                </p>                            </div>                        </div>                        <div class="md:col-span-4 flex flex-col gap-4 justify-center h-full">                            <!-- Foto Premiação -->                            <div class="relative group rounded-xl overflow-hidden border border-brand-pink/30 shadow-lg h-48 md:h-56">                                <img src="https://i.imgur.com/C1CJ3G3.jpeg" alt="Premiação ISG" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300">                                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-3">                                    <span class="text-[10px] text-white/90 font-roboto uppercase tracking-wider">Premiação Oficial</span>                                </div>                            </div>                            <!-- Stat Box Compactado -->                            <div class="flex items-center justify-between bg-brand-surface/50 border border-brand-pink/30 rounded-xl p-4 w-full">                                <div class="flex flex-col text-left">                                     <span class="font-poppins font-bold text-2xl text-white leading-none">3x Líder</span>                                     <span class="text-[9px] text-brand-text/50 uppercase tracking-widest mt-1">ISG Provider Lens™</span>                                </div>                                <span class="material-symbols-outlined text-3xl text-brand-pink">workspace_premium</span>                            </div>                        </div>                    </div>                </div>
-                <!-- NOVO PRÊMIO IMPACT GENERATION -->                <div class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-blue relative overflow-hidden">                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-blue/10 rounded-full blur-2xl"></div>                    <div class="flex items-center gap-3 mb-6 relative z-10">                        <span class="material-symbols-outlined text-brand-blue text-2xl">campaign</span>                        <h3 class="font-poppins text-lg font-bold text-white uppercase tracking-wide">Marketing & Eficiência</h3>                    </div>                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">                        <div class="space-y-4">                            <h4 class="font-poppins text-xl font-bold text-white leading-tight">                                Conquistamos o Prêmio Impact Generation do Google Cloud! ✨🏆                            </h4>                            <div class="space-y-3 font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">                                <p>                                    No Partner Marketing Efficiency Programs — Best of the Year 2025, fomos reconhecidos por transformar uma iniciativa interna em um modelo mensurável, sustentável e de alto impacto.                                </p>                                <p>                                    A "Maratona do Sucesso" evoluiu de um exercício cultural para um sistema de produtividade estratégica, combinando medição objetiva, incentivos inteligentes e alinhamento de equipe para impulsionar resultados reais.                                </p>                                <p class="font-medium text-white">                                    Obrigado ao Google Cloud e, especialmente, a toda a equipe da Xertica.ai: seu compromisso e criatividade tornaram essa conquista possível.                                </p>                            </div>                        </div>                        <div class="grid grid-cols-2 gap-4">                            <img src="https://i.imgur.com/NrOfcBg.jpeg" alt="Premio Impact Generation" class="w-full h-auto rounded-lg shadow-lg border border-brand-blue/20 hover:scale-105 transition-transform duration-300">                            <img src="https://i.imgur.com/caUGOXv.jpeg" alt="Premio Impact Generation Equipe" class="w-full h-auto rounded-lg shadow-lg border border-brand-blue/20 hover:scale-105 transition-transform duration-300">                        </div>                    </div>                </div>
-                <!-- GRID: GOOGLE CLOUD & IMPRENSA -->                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">                                        <!-- GOOGLE CLOUD SOCIAL IMPACT -->                    <div class="glass-card rounded-2xl p-6 border-l-4 border-l-brand-green relative overflow-hidden flex flex-col h-full">                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-green/10 rounded-full blur-2xl"></div>                                                <div class="relative z-10 mb-4">                            <div class="flex items-center gap-2 mb-3">                                <span class="material-symbols-outlined text-brand-green text-2xl">workspace_premium</span>                                <span class="font-poppins text-xs font-bold text-brand-green uppercase tracking-wider">Social Impact</span>                            </div>                            <h4 class="font-poppins text-xl font-bold text-white leading-tight">                                Tecnologia com Propósito: Google Cloud reconhece o impacto transformador da IA da Xertica na América Latina.                            </h4>                            <p class="font-roboto text-xs text-brand-text/70 mt-2">                                Tecnologia que moderniza o governo e impulsiona o impacto social.                            </p>                        </div>
-                        <div class="relative z-10 my-4 flex-grow">                            <img src="https://traveltechhub.com.br/_next/image?url=https%3A%2F%2Fcms.traveltechhub.com.br%2Fwp-content%2Fuploads%2F2025%2F04%2FWhatsApp-Image-2025-04-17-at-17.46.36.jpeg&w=1920&q=75"                                 alt="Prêmio Google Cloud Social Impact"                                 class="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg border border-brand-green/20">                        </div>
-                        <div class="relative z-10 space-y-4">                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                A Xertica.ai consolidou sua liderança no mercado Govtech latino-americano ao receber o prêmio <strong>"Google Cloud Social Impact Partner of the Year – Technology for Good"</strong>. Este reconhecimento global atua como uma poderosa validação da nossa tese central.                            </p>                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">                                Nossas soluções provaram que é possível unir performance operacional e propósito humanitário. Receber este selo diretamente da infraestrutura do Google confirma ao mercado que nossas entregas não apenas geram valor público imediato, mas estabelecem um novo padrão de confiança.                            </p>                        </div>                    </div>
-                    <!-- IMPRENSA -->                    <div class="flex flex-col h-full space-y-4">                        <div class="flex items-center gap-3">                            <div class="p-2 bg-brand-blue/20 rounded-lg text-brand-blue border border-brand-blue/30">                                <span class="material-symbols-outlined text-xl">newspaper</span>                            </div>                            <div>                                <h3 class="font-poppins text-lg font-bold text-white uppercase tracking-wide leading-none">Imprensa</h3>                                <span class="text-[10px] text-brand-text/50 font-roboto">Xertica na Mídia</span>                            </div>                        </div>
-                        <div class="flex flex-col gap-4 flex-grow">                            <!-- Notícia 1 (IMAGEM ATUALIZADA) -->                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-brand-surface rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10">                                    <img src="https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/bvvyrfuktgdc.jpg" alt="Famurs" class="w-full h-full object-cover opacity-90 group-hover:opacity-100">                                </div>                                <div class="flex flex-col justify-between">                                    <div>                                        <span class="text-brand-blue text-[9px] font-bold uppercase mb-1 block">Portal Famurs</span>                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">                                            Famurs e Ministério Público avançam em nova ação para uso de inteligência artificial nas gestões municipais                                        </h4>                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">                                            Modernização dos sistemas de licitações com ferramentas digitais avançadas para ampliar a eficiência e transparência.                                        </p>                                    </div>                                    <a href="https://famurs.com.br/noticia/4141" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>                                    </a>                                </div>                            </div>
-                            <!-- Notícia 2 -->                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-white rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10 shadow-sm">                                    <img src="https://i.imgur.com/ZielbnZ.png" alt="Governo RS" class="w-full h-full object-contain scale-110">                                </div>                                <div class="flex flex-col justify-between">                                    <div>                                        <span class="text-brand-pink text-[9px] font-bold uppercase mb-1 block">Estado RS</span>                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">                                            Comitiva conhece soluções de IA para segurança pública em agenda com a Xertica, em Nova York                                        </h4>                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">                                            Encontro focou em ferramentas para qualificação de inquéritos e gestão inteligente de chamadas de emergência.                                        </p>                                    </div>                                    <a href="https://www.estado.rs.gov.br/comitiva-conhece-solucoes-de-inteligencia-artificial-para-seguranca-publica-em-agenda-com-a-xertica-em-nova-york" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>                                    </a>                                </div>                            </div>
-                            <!-- Notícia 3 -->                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-brand-surface rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10">                                    <img src="https://jornaldobras.com.br/images/noticias/69335/19050833_distinctio.jpg.jpg" alt="Communicator Awards" class="w-full h-full object-cover opacity-90 group-hover:opacity-100" onerror="this.src='https://placehold.co/100x100/121A2B/EBFAFF?text=Awards'">                                </div>                                <div class="flex flex-col justify-between">                                    <div>                                        <span class="text-brand-blue text-[9px] font-bold uppercase mb-1 block">Jornal do Brás</span>                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">                                            Volkswagen e Xertica.ai são premiadas no Communicator Awards com campanhas da LLYC                                        </h4>                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">                                            Projeto de Rebranding da Xertica recebe distinção internacional em design e estratégia de marca na edição 2025.                                        </p>                                    </div>                                    <a href="https://jornaldobras.com.br/noticia/69335/volkswagen-e-xertica-ia-sao-premiadas-no-communicator-awards-com-campanhas-da-llyc" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>                                    </a>                                </div>                            </div>
-                            <!-- Notícia 4 -->                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-brand-surface rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10">                                    <img src="https://cms.traveltechhub.com.br/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-17-at-17.46.36.jpeg" alt="Prêmio Google Cloud" class="w-full h-full object-cover opacity-90 group-hover:opacity-100" onerror="this.src='https://placehold.co/100x100/121A2B/EBFAFF?text=Google+Cloud'">                                </div>                                <div class="flex flex-col justify-between">                                    <div>                                        <span class="text-brand-blue text-[9px] font-bold uppercase mb-1 block">Travel Tech Hub</span>                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">                                            Xertica.ai é premiada pelo Google Cloud por soluções de IA que geram impacto social                                        </h4>                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">                                            Reconhecimento como Social Impact Partner of the Year valida a união entre performance operacional e propósito humanitário na América Latina.                                        </p>                                    </div>                                    <a href="https://cms.traveltechhub.com.br/xertica-ai-e-premiada-pelo-google-cloud-por-solucoes-de-ia-que-geram-impacto-social-na-america-latina/upload/" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>                                    </a>                                </div>                            </div>                        </div>                    </div>                </div>
-                <!-- TEXTO FINAL DE ENCERRAMENTO -->                <div class="glass-card rounded-2xl p-8 border-t-4 border-t-brand-blue relative overflow-hidden mt-12">                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none -ml-16 -mb-16"></div>                    <div class="relative z-10 space-y-4">                        <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify">                            O impacto social apresentado neste relatório reflete um ano em que tecnologia e dignidade humana caminharam lado a lado. Em 2025, fortalecemos nossa equipe, aceleramos entregas estratégicas e ajudamos governos a transformar processos essenciais nas áreas de justiça, saúde, meio ambiente, habitação e transparência pública. Cada case demonstrou que inovação pode gerar resultados imediatos para a população — reduzindo filas, prevenindo riscos, acelerando decisões e democratizando o acesso à informação.                        </p>                        <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify font-medium">                            Em 2026, seguiremos ampliando esse compromisso, levando nossas soluções para novos Estados e instituições, e aprofundando nossa missão de gerar valor público real e mensurável para governos e cidadãos.                        </p>                    </div>                </div>
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Impacto 2025 | Xertica.ai</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'roboto': ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#00BEFF',
+                            green: '#C0FF7D',
+                            pink: '#FF89FF',
+                            dark: '#050B14',
+                            surface: '#121A2B',
+                            text: '#EBFAFF'
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-brand': 'linear-gradient(90deg, #00BEFF 0%, #C0FF7D 100%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050B14;
+            background-image: url('https://i.imgur.com/m70xN5H.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #EBFAFF;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Refinado */
+        .glass-card {
+            background: rgba(18, 26, 43, 0.65); /* Levemente mais opaco para contraste */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 190, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 190, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Gradient Text Reforçado */
+        .text-gradient-primary {
+            background: linear-gradient(90deg, #00BEFF, #C0FF7D);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            font-weight: 700;
+        }
+        
+        .text-gradient-pink {
+            background: linear-gradient(90deg, #FF89FF, #00BEFF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050B14; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00BEFF; 
+        }
+        
+        /* Animation utilities */
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative">
+
+    <!-- Navbar Sticky -->
+    <nav class="sticky top-0 z-50 bg-[#050B14]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <img src="https://storage.googleapis.com/etp-bucket/Logos%20Xertica.ai%20%28.png%29/xertica.ai/Copy%20of%20Logo_XERTICA_white.png" 
+                        alt="Xertica.ai Logo" 
+                        class="h-8 w-auto"
+                        onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                    <h2 class="text-2xl font-bold text-white font-poppins hidden">Xertica<span class="text-brand-blue">.ai</span></h2>
+                </div>
+                <!-- Title -->
+                <div>
+                    <h1 class="font-poppins font-medium text-sm md:text-base text-white/80 tracking-tight">Nosso crescimento reflete na sociedade</h1>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="relative z-10 flex-grow py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto space-y-16">
+
+            <!-- ========================================== -->
+            <!-- SEÇÃO 1: HERO & GROWTH -->
+            <!-- ========================================== -->
+            <section class="space-y-8 animate-fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-7 space-y-6">
+                        <h2 class="font-poppins text-4xl md:text-5xl font-semibold text-white leading-tight">
+                            Relatório de Impacto da <br>
+                            <span class="text-gradient-primary">Xertica.ai em 2025</span>
+                        </h2>
+                        <p class="font-roboto text-brand-text/80 text-base leading-relaxed text-justify">
+                            Em 2025, a Xertica.ai consolidou sua liderança estratégica, ampliando a entrega de valor para instituições públicas críticas. Este desempenho reflete a robustez do nosso modelo de operação e o investimento maciço em capital intelectual especializado para solucionar desafios estruturais da região.
+                        </p>
+                        
+                        <!-- IMAGEM DE TOPO -->
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl border border-brand-blue/20 group">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050B14] via-transparent to-transparent opacity-60 z-10"></div>
+                            <img src="https://media.licdn.com/dms/image/v2/D4E22AQEIwMCUPSu0Yw/feedshare-shrink_800/B4EZnkdR6nKwAg-/0/1760474507557?e=2147483647&v=beta&t=5xHNBMnETLuRCYw1CXkZtvX6c-mjMHNQjuKaCwkZccE" alt="Equipe Xertica" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 flex flex-col gap-4">
+                        <!-- CARD CRESCIMENTO -->
+                        <div class="glass-card rounded-xl p-6 border-l-4 border-l-brand-blue relative overflow-hidden group">
+                            <div class="absolute right-4 top-4">
+                                <span class="material-symbols-outlined text-4xl text-brand-blue">trending_up</span>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <span class="font-roboto text-xs text-brand-blue uppercase font-bold tracking-wider block mb-2">Nosso crescimento de receita em 2025</span>
+                                <p class="font-roboto text-[11px] text-white/80 leading-snug pr-8">
+                                    Nossa solidez financeira garante a perenidade de projetos essenciais e amplia nossa capacidade de reinvestimento em tecnologias de impacto social.
+                                </p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-3">
+                                <!-- Gross -->
+                                <div class="bg-brand-surface/50 border border-brand-blue/20 rounded-lg p-3 flex flex-col justify-center items-center text-center hover:bg-brand-blue/10 transition-colors">
+                                    <span class="font-roboto text-[10px] text-brand-text/60 uppercase font-bold tracking-wider block mb-1">Gross Rev.</span>
+                                    <span class="font-poppins text-3xl font-bold text-white leading-none">+115%</span>
+                                </div>
+                                
+                                <!-- Net -->
+                                <div class="bg-brand-surface/50 border border-brand-blue/20 rounded-lg p-3 flex flex-col justify-center items-center text-center hover:bg-brand-blue/10 transition-colors">
+                                    <span class="font-roboto text-[10px] text-brand-text/60 uppercase font-bold tracking-wider block mb-1">Net Rev.</span>
+                                    <span class="font-poppins text-3xl font-bold text-white leading-none">+44%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CARD NOVOS TALENTOS -->
+                        <div class="glass-card rounded-xl p-6 border-l-4 border-l-brand-pink relative overflow-hidden group">
+                            <div class="absolute right-4 top-4">
+                                <span class="material-symbols-outlined text-4xl text-brand-pink drop-shadow-md">groups</span>
+                            </div>
+                            <span class="font-roboto text-xs text-brand-pink uppercase font-bold tracking-wider block mb-1">Novos Talentos</span>
+                            <h4 class="font-poppins text-xl font-bold text-white leading-tight mb-3 pr-10">
+                                Expansão da nossa força de trabalho
+                            </h4>
+                            <div class="space-y-2">
+                                <p class="font-roboto text-sm text-brand-text/80 leading-relaxed text-justify">
+                                    Aumentamos nossa equipe em <span class="text-4xl font-bold text-brand-green font-poppins align-middle mx-1 block my-2">95,5%</span> 
+                                    Esse movimento estratégico impulsiona a geração de empregos qualificados e fomenta a economia do conhecimento, inserindo novos especialistas na vanguarda da transformação digital pública. Isso é importante porque tecnologia não se faz apenas com máquinas; se faz com pessoas. Trouxemos novos talentos para a transformar e modernizar muitos projetos ambiciosos, gerando empregos qualificados para a sociedade e fechando o segundo ano fiscal de operação no Brasil com <span class="text-brand-green font-bold">129 postos ocupados</span>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-        </div>    </main>
-    <!-- Footer -->    <footer class="mt-16 py-8 border-t border-brand-text/10 bg-[#050B14] relative z-20">        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">            <span class="font-roboto text-xs text-brand-text/40">© 2025 Xertica.ai. Todos os direitos reservados.</span>            <div class="flex items-center gap-3">                <img src="https://i.imgur.com/5Kp6iE8.jpeg" alt="Gustavo de Paula" class="w-10 h-10 rounded-full border border-brand-blue/30 object-cover">                <div class="flex flex-col">                    <span class="font-roboto text-[10px] text-brand-text/50 uppercase tracking-wider mb-0.5">Assinado por</span>                    <span class="font-poppins text-xs font-bold text-white">Gustavo de Paula</span>                    <span class="font-roboto text-[10px] text-brand-text/60">Country Manager, Xertica.ai</span>                </div>            </div>        </div>    </footer>
-</body></html>
+
+            <!-- ========================================== -->
+            <!-- SEÇÃO 2: QUALIFICAÇÃO -->
+            <!-- ========================================== -->
+            <section class="glass-card rounded-2xl p-8 border-t-4 border-t-brand-pink relative overflow-hidden">
+                <div class="absolute bottom-0 right-0 w-64 h-64 bg-brand-pink/10 rounded-full blur-3xl pointer-events-none -mr-10 -mb-10"></div>
+                
+                <div class="flex items-center gap-3 mb-6 border-b border-brand-text/10 pb-4">
+                    <span class="material-symbols-outlined text-brand-pink text-3xl">school</span>
+                    <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Qualificação</h3>
+                </div>
+                
+                <!-- TEXTO INTRODUTÓRIO -->
+                <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify mb-8 max-w-4xl">
+                    Acreditamos que o conhecimento é a base da inovação. Por isso, investimos continuamente na qualificação e certificação de nossos colaboradores, elevando o padrão técnico de nossas entregas e contribuindo para o desenvolvimento tecnológico da sociedade.
+                </p>
+
+                <!-- GRID BALANCEADO (INTERNA vs EXTERNA) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:divide-x lg:divide-white/10">
+                    
+                    <!-- COLUNA 1: QUALIFICAÇÃO INTERNA -->
+                    <div class="flex flex-col gap-6 lg:pr-8 pb-8 lg:pb-0 border-b lg:border-b-0 border-white/10">
+                        <div>
+                            <h4 class="font-poppins text-sm font-bold text-brand-pink uppercase mb-2 tracking-wider flex items-center gap-2">
+                                <span class="material-symbols-outlined text-lg">cast_for_education</span> Qualificação Interna
+                            </h4>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Disponibilizamos treinamentos avançados para elevar nosso domínio em tecnologias Google, especializando nosso time constantemente.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Box Treinamentos -->
+                            <div class="bg-brand-surface/40 rounded-lg p-4 border border-brand-pink/20 flex flex-col justify-center items-center text-center">
+                                <span class="text-3xl font-bold text-white font-poppins mb-1">43</span>
+                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Treinamentos</span>
+                                <span class="text-2xl font-bold text-brand-pink font-poppins mt-3 mb-1">1.419</span>
+                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Horas Consumidas</span>
+                            </div>
+                            <!-- Box Certificações -->
+                            <div class="bg-brand-surface/40 rounded-lg p-4 border border-brand-blue/20 flex flex-col justify-center items-center text-center">
+                                <span class="text-3xl font-bold text-white font-poppins mb-1">550</span>
+                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Certificações</span>
+                                <span class="text-2xl font-bold text-brand-blue font-poppins mt-3 mb-1">33k+</span>
+                                <span class="text-[10px] text-brand-text/60 uppercase font-bold tracking-wider">Horas Consumidas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COLUNA 2: QUALIFICAÇÃO EXTERNA -->
+                    <div class="flex flex-col gap-6 lg:pl-8 pt-8 lg:pt-0">
+                        <div>
+                            <h4 class="font-poppins text-sm font-bold text-brand-green uppercase mb-2 tracking-wider flex items-center gap-2">
+                                <span class="material-symbols-outlined text-lg">public</span> Qualificação Externa
+                            </h4>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Eventos, Webinars e Treinamentos abertos ao público, reforçando nosso impacto na comunidade tech e compartilhando conhecimento estratégico.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <!-- Box 1: Pessoas Impactadas -->
+                            <div class="bg-brand-surface/40 rounded-lg p-3 border border-brand-green/20 flex flex-col justify-center items-center text-center relative overflow-hidden h-full">
+                                <div class="absolute top-0 left-0 w-full h-1 bg-brand-green/30"></div>
+                                <span class="text-[9px] text-brand-green uppercase font-bold tracking-wider mb-2">Eventos/Webinars</span>
+                                <span class="text-2xl font-bold text-white font-poppins mb-1">53K</span>
+                                <span class="text-[9px] text-brand-text/60 uppercase font-bold tracking-wider leading-tight">Pessoas Impactadas</span>
+                            </div>
+
+                            <!-- Box 2: Horas Mercado -->
+                            <div class="bg-brand-surface/40 rounded-lg p-3 border border-brand-green/20 flex flex-col justify-center items-center text-center relative overflow-hidden h-full">
+                                <div class="absolute top-0 left-0 w-full h-1 bg-brand-green/30"></div>
+                                <span class="text-[9px] text-brand-green uppercase font-bold tracking-wider mb-2">Mercado</span>
+                                <span class="text-2xl font-bold text-white font-poppins mb-1">11.741</span>
+                                <span class="text-[9px] text-brand-text/60 uppercase font-bold tracking-wider leading-tight">Horas Qualificação</span>
+                            </div>
+
+                            <!-- Box 3: Clientes -->
+                            <div class="bg-brand-surface/40 rounded-lg p-3 border border-brand-blue/20 flex flex-col justify-center items-center text-center relative overflow-hidden h-full">
+                                <div class="absolute top-0 left-0 w-full h-1 bg-brand-blue/30"></div>
+                                <span class="text-[9px] text-brand-blue uppercase font-bold tracking-wider mb-2">Clientes</span>
+                                <span class="text-2xl font-bold text-white font-poppins mb-1">4.800</span>
+                                <span class="text-[9px] text-brand-text/60 uppercase font-bold tracking-wider leading-tight">Horas Consumidas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- NOVA SEÇÃO: IMPACTO SOCIAL -->
+            <!-- ========================================== -->
+            <section class="animate-fade-in-up delay-200">
+                <div class="glass-card rounded-2xl p-8 border-t-4 border-t-brand-blue relative overflow-hidden text-center">
+                     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full bg-gradient-to-b from-brand-blue/5 to-transparent pointer-events-none"></div>
+                     
+                     <div class="relative z-10 mb-10">
+                        <span class="material-symbols-outlined text-brand-blue text-5xl mb-4">public</span>
+                        <h2 class="font-poppins text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                            <span class="text-gradient-primary">+100 Milhões</span> de vidas<br>impactadas por nossa IA
+                        </h2>
+                        
+                        <!-- Destaque Clientes -->
+                        <div class="inline-flex items-center gap-2 bg-brand-blue/10 border border-brand-blue/30 rounded-full px-5 py-2 backdrop-blur-md hover:bg-brand-blue/20 transition-colors cursor-default">
+                            <span class="material-symbols-outlined text-brand-blue text-xl">domain_add</span>
+                            <span class="font-poppins text-sm md:text-base font-bold text-white tracking-wide">
+                                Carteira consolidada com <span class="text-brand-blue">+800 Clientes</span> em 2025
+                            </span>
+                        </div>
+                     </div>
+
+                     <p class="relative z-10 font-roboto text-sm text-brand-text/80 leading-relaxed text-justify max-w-4xl mx-auto mb-10">
+                        A Xertica Brasil integra a operação da companhia em sete mercados estratégicos da América Latina, que juntos representam mais de US$ 6 trilhões em PIB. Nesse contexto, o Brasil se destaca como a maior economia do bloco, respondendo por aproximadamente 35% a 40% desse total. A forte atuação da Xertica no país — especialmente junto aos setores público e corporativo — amplia o alcance e a escala de suas soluções de nuvem e IA, potencializando impactos relevantes em eficiência institucional, serviços públicos e transformação digital em toda a região.
+                     </p>
+
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                        <!-- Justiça -->
+                        <div class="bg-brand-surface/40 rounded-xl p-6 border border-brand-blue/20 hover:border-brand-blue/50 transition-colors group flex flex-col h-full">
+                            <div class="w-12 h-12 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform flex-shrink-0">
+                                <span class="material-symbols-outlined text-brand-blue text-2xl">balance</span>
+                            </div>
+                            <h4 class="font-poppins text-lg font-bold text-brand-blue uppercase tracking-wide mb-1">Justiça</h4>
+                            <h3 class="font-poppins text-3xl font-bold text-white mb-1">+35 Mi</h3>
+                            <span class="font-roboto text-[10px] text-brand-text/60 uppercase tracking-wider block mb-3">Cidadãos Impactados</span>
+                            <div class="h-px w-12 bg-brand-blue/30 mx-auto mb-4"></div>
+                            
+                            <h5 class="font-poppins text-xs font-bold text-white mb-2 leading-tight">Aceleramos o acesso a processos legais justos e ágeis</h5>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Implementamos automação jurídica baseada em IA que simplificou procedimentos, reduziu o acúmulo de processos e diminuiu o tempo de resolução de casos de meses para dias. Digitalizamos fluxos de trabalho e viabilizamos audiências virtuais, ampliando o acesso à justiça para mais de 35 milhões de cidadãos.
+                            </p>
+                        </div>
+
+                        <!-- Gestão Pública -->
+                        <div class="bg-brand-surface/40 rounded-xl p-6 border border-brand-green/20 hover:border-brand-green/50 transition-colors group flex flex-col h-full">
+                            <div class="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform flex-shrink-0">
+                                <span class="material-symbols-outlined text-brand-green text-2xl">location_city</span>
+                            </div>
+                            <h4 class="font-poppins text-lg font-bold text-brand-green uppercase tracking-wide mb-1">Gestão Pública</h4>
+                            <h3 class="font-poppins text-3xl font-bold text-white mb-1">+25 Mi</h3>
+                            <span class="font-roboto text-[10px] text-brand-text/60 uppercase tracking-wider block mb-3">Moradores Beneficiados</span>
+                            <div class="h-px w-12 bg-brand-green/30 mx-auto mb-4"></div>
+                            
+                            <h5 class="font-poppins text-xs font-bold text-white mb-2 leading-tight">Implementamos serviços públicos orientados por IA</h5>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Transformamos a gestão urbana através de assistência ao cidadão com IA, análises preditivas de segurança e inteligência geoespacial. Nossas inovações aumentaram a eficiência, a segurança e a transparência, beneficiando diretamente mais de 25 milhões de moradores na América Latina.
+                            </p>
+                        </div>
+
+                        <!-- Saúde -->
+                        <div class="bg-brand-surface/40 rounded-xl p-6 border border-brand-pink/20 hover:border-brand-pink/50 transition-colors group flex flex-col h-full">
+                            <div class="w-12 h-12 bg-brand-pink/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform flex-shrink-0">
+                                <span class="material-symbols-outlined text-brand-pink text-2xl">cardiology</span>
+                            </div>
+                            <h4 class="font-poppins text-lg font-bold text-brand-pink uppercase tracking-wide mb-1">Saúde</h4>
+                            <h3 class="font-poppins text-3xl font-bold text-white mb-1">+30 Mi</h3>
+                            <span class="font-roboto text-[10px] text-brand-text/60 uppercase tracking-wider block mb-3">Pessoas Impactadas</span>
+                            <div class="h-px w-12 bg-brand-pink/30 mx-auto mb-4"></div>
+                            
+                            <h5 class="font-poppins text-xs font-bold text-white mb-2 leading-tight">Ampliamos o acesso e ajudamos a salvar vidas</h5>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Viabilizamos milhões de consultas por telemedicina, diagnósticos via IA e monitoramento preditivo. Permitimos tratamentos mais rápidos e precisos, além de estratégias preventivas, melhorando os desfechos médicos para mais de 30 milhões de pessoas.
+                            </p>
+                        </div>
+                     </div>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- SEÇÃO 3: HISTÓRIAS DE IMPACTO -->
+            <!-- ========================================== -->
+            <section>
+                <div class="flex flex-col mb-6">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="material-symbols-outlined text-brand-green text-3xl">verified</span>
+                        <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Histórias de Impacto</h3>
+                    </div>
+                    <p class="font-roboto text-sm text-brand-text/60 ml-10">
+                        Histórias que impactam a sociedade, bem como cidadãos e serviços públicos.
+                    </p>
+                    <div class="h-[1px] bg-brand-blue/20 w-full mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8">
+                    
+                    <!-- CASE SEMAD -->
+                    <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-green relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>
+                        <div class="flex flex-col md:flex-row md:items-start justify-between mb-6 relative z-10 gap-4">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-3 flex-wrap">
+                                    <!-- LOGO SEMAD -->
+                                    <img src="https://static.wixstatic.com/media/8307fe_1961d2cd7911448bb6e7299c434f4144~mv2.jpg/v1/fill/w_1000,h_736,al_c,q_85,usm_0.66_1.00_0.01/8307fe_1961d2cd7911448bb6e7299c434f4144~mv2.jpg" alt="SEMAD Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">
+                                    <span class="bg-brand-green/10 text-brand-green text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-green/20">Meio Ambiente</span>
+                                    <h4 class="font-poppins text-xl font-bold text-white">SEMAD (MG): Modernização e Sustentabilidade</h4>
+                                </div>
+                                <p class="font-roboto text-sm text-white/90 leading-relaxed">Ao destravar um passivo histórico de 65 mil processos ambientais, nossa IA ajudou o Estado a combater a impunidade e fortalecer a proteção ambiental para toda a população.</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 border-t border-brand-green/10 pt-6">
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2 text-brand-pink">
+                                    <span class="material-symbols-outlined text-base">warning</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    Minas Gerais enfrentava uma crise com 65.000 autos de infração em papel acumulados. A equipe reduzida não conseguia processar o volume manualmente, resultando na prescrição de crimes, impunidade e perda de arrecadação.
+                                </p>
+                            </div>
+                            <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">
+                                <div class="flex items-center gap-2 text-brand-blue">
+                                    <span class="material-symbols-outlined text-base">psychology</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    Implementação do SIA (IA + Google Cloud) com OCR para leitura de documentos e triagem automática de infrações e valores. O sistema redige minutas de decisão para casos padronizados, exigindo apenas a validação final do servidor.
+                                </p>
+                            </div>
+                            <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">
+                                <div class="flex items-center gap-2 text-brand-green">
+                                    <span class="material-symbols-outlined text-base">check_circle</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    Processos que levavam dias agora são triados em segundos. O sistema limpou o passivo histórico de 65.000 processos (algo que levaria anos manualmente) e reduziu drasticamente o tempo de tramitação administrativa.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- SEÇÃO 4: JUSTIÇA E GOVERNO -->
+            <!-- ========================================== -->
+            <section class="space-y-8">
+                
+                <!-- CARD UNIFICADO: JUSTIÇA (MPRS + TJES) -->
+                <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-blue relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>
+                    
+                    <div class="flex items-center gap-3 mb-8 border-b border-brand-blue/20 pb-4">
+                        <span class="bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-blue/20">Justiça</span>
+                        <h3 class="font-poppins text-xl font-bold text-white uppercase tracking-wide">Transformação do Judiciário</h3>
+                    </div>
+
+                    <!-- MPRS -->
+                    <div class="relative z-10 mb-10">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
+                            <div class="flex-1 flex items-center gap-4">
+                                <!-- LOGO MPRS -->
+                                <img src="https://i.ytimg.com/vi/6SFAl_DjVlA/maxresdefault.jpg" alt="MPRS Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">
+                                <h4 class="font-poppins text-xl font-bold text-white">MPRS: Justiça Acelerada por IA</h4>
+                            </div>
+                        </div>
+                        <p class="font-roboto text-sm text-white mt-1 mb-6">Ao automatizar transcrições, buscas de endereços e análises jurídicas no MPRS, nossa IA reduz filas processuais e melhora o atendimento ao público com respostas muito mais rápidas.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-brand-blue/10 pt-6">
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2 text-brand-pink">
+                                    <span class="material-symbols-outlined text-base">warning</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    O Ministério Público enfrentava desafios na gestão de processos devido à complexidade e ao volume de demandas. A execução manual de tarefas como transcrições de audiências e buscas de endereços era onerosa e lenta.
+                                </p>
+                            </div>
+                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">
+                                <div class="flex items-center gap-2 text-brand-blue">
+                                    <span class="material-symbols-outlined text-base">psychology</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    A Xertica.ai desenvolveu uma solução com quatro verticais: transcrição de áudio, busca de endereços, consultas semânticas e elaboração automática de documentos jurídicos, tudo centralizado e baseado em IA.
+                                </p>
+                            </div>
+                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">
+                                <div class="flex items-center gap-2 text-brand-green">
+                                    <span class="material-symbols-outlined text-base">check_circle</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    A solução reduziu significativamente o tempo dos processos, transformando tarefas de meses em horas. Liberou recursos valiosos para casos prioritários e acelerou a resolução de casos para a população.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-px bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent w-full my-8"></div>
+
+                    <!-- TJES -->
+                    <div class="relative z-10">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4">
+                            <div class="flex items-center gap-4">
+                                <!-- LOGO TJES -->
+                                <img src="https://yt3.googleusercontent.com/g4gJe7-x9wMu7ihO4dLeBtx3_b1ihKdmfzObXnjTtGpfuv5NoOAQmEoxqZmCEO-x1Vc0udxh3g=s900-c-k-c0x00ffffff-no-rj" alt="TJES Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">
+                                <h4 class="font-poppins text-xl font-bold text-white">TJES: Inovação na Gestão Processual</h4>
+                            </div>
+                        </div>
+                        <p class="font-roboto text-sm text-white mt-1 mb-6 max-w-2xl">Ao reduzir drasticamente o tempo de análise de audiências, nossa IA acelerou decisões que impactam diretamente a vida do cidadão, promovendo uma Justiça mais rápida, acessível e menos burocrática.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-brand-blue/10 pt-6">
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2 text-brand-pink">
+                                    <span class="material-symbols-outlined text-base">warning</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    O TJES enfrentava ineficiência com processos levando anos. A dependência de tarefas manuais, como transcrições demoradas, elevava custos. A falta de busca robusta de precedentes comprometia a padronização.
+                                </p>
+                            </div>
+                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">
+                                <div class="flex items-center gap-2 text-brand-blue">
+                                    <span class="material-symbols-outlined text-base">psychology</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    Implementação de solução de IA para transcrição e análise de vídeos. A tecnologia reduziu o tempo de revisão de audiências de 3 horas para 30 minutos, garantindo agilidade nas alegações finais.
+                                </p>
+                            </div>
+                            <div class="space-y-2 md:border-l border-brand-blue/10 md:pl-6">
+                                <div class="flex items-center gap-2 text-brand-green">
+                                    <span class="material-symbols-outlined text-base">check_circle</span>
+                                    <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>
+                                </div>
+                                <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                    Integração segura de IA em Google Cloud com sistemas legados e plataforma do CNJ. Estratégia de MVP validou eficácia no gargalo de transcrições, unindo inovação à linguagem jurídica.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CASE GOVERNO MT -->
+                <article class="glass-card rounded-2xl p-6 md:p-8 border-t-4 border-t-brand-green relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>
+                    <div class="flex flex-col mb-6 relative z-10">
+                        <div class="flex items-center gap-3 mb-2 flex-wrap">
+                            <!-- LOGO GOV MT -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaY9B35gyu5d5f4uLhUTMHa-DLQRyGnVpEZw&s" alt="Governo MT Logo" class="w-20 h-auto object-contain rounded-lg border border-white/10 bg-white/5 p-1">
+                            <span class="bg-brand-green/10 text-brand-green text-xs font-bold px-3 py-1 rounded-full uppercase border border-brand-green/20">Gestão Pública</span>
+                            <h4 class="font-poppins text-xl font-bold text-white">Governo Mato Grosso: Transparência Ativa</h4>
+                        </div>
+                        <p class="font-roboto text-sm text-white max-w-3xl">Ao possibilitar consultas em linguagem natural, nossa IA democratizou o acesso às informações públicas e ampliou a transparência.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 border-t border-brand-green/10 pt-6">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2 text-brand-pink">
+                                <span class="material-symbols-outlined text-base">warning</span>
+                                <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Desafio</h5>
+                            </div>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                O principal obstáculo era a inacessibilidade do RAG. Considerado denso e burocrático, o documento gerava excesso de dados sem uso estratégico para gestores e dificultava o acompanhamento pela sociedade.
+                            </p>
+                        </div>
+                        <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">
+                            <div class="flex items-center gap-2 text-brand-blue">
+                                <span class="material-symbols-outlined text-base">psychology</span>
+                                <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">A Solução</h5>
+                            </div>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                A Xertica implementou o <strong>Avalia Gov.MT</strong>, unindo dashboards interativos e um chatbot de IA no Google Cloud. A solução transformou o RAG em um portal vivo e estratégico, permitindo consultas em linguagem natural.
+                            </p>
+                        </div>
+                        <div class="space-y-2 md:border-l border-brand-green/10 md:pl-6">
+                            <div class="flex items-center gap-2 text-brand-green">
+                                <span class="material-symbols-outlined text-base">check_circle</span>
+                                <h5 class="font-poppins text-sm font-bold uppercase tracking-wide">O Resultado</h5>
+                            </div>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Agilidade com consultas instantâneas, liberando servidores. Gestores agora decidem com base em dados claros. Cidadãos acompanham políticas com transparência.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- NOVA SESSÃO 1: INTELIGÊNCIA ARTIFICIAL PARA O BEM SOCIAL -->
+            <!-- ========================================== -->
+            <section class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-pink relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-pink/10 rounded-full blur-2xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-brand-pink text-3xl">volunteer_activism</span>
+                        <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Inteligência Artificial como Agente de Transformação Social</h3>
+                    </div>
+                    <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify">
+                        Acreditamos que a tecnologia só tem sentido quando melhora a vida das pessoas. Nossa IA não substitui o humano, ela o empodera. Ao analisar grandes volumes de dados, permitimos que gestores públicos tomem decisões proativas, não reativas. Isso se traduz em menos filas em hospitais, escolas melhor alocadas, prevenção de desastres e, fundamentalmente, na garantia de direitos básicos para o cidadão.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- NOVA SESSÃO 2: EFICIÊNCIA ESTATAL (JUSTIÇA/GOVERNO) -->
+            <!-- ========================================== -->
+            <section class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-blue relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-blue/10 rounded-full blur-2xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-brand-blue text-3xl">balance</span>
+                        <h3 class="font-poppins text-2xl font-bold text-white uppercase tracking-wide">Eficiência Estatal: Justiça e Governo Ágeis</h3>
+                    </div>
+                    <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify">
+                        O gargalo do Estado muitas vezes não é a falta de vontade, é a capacidade de processamento. Nossas soluções de IA Generativa leem, interpretam e triam documentos jurídicos e administrativos em segundos. Na Justiça, isso reduz o tempo de decisão de anos para dias, combatendo a impunidade e garantindo a celeridade processual. No Governo, elimina a burocracia do papel e gargalos administrativos, permitindo uma gestão transparente, auditável e que responde na velocidade das demandas reais da sociedade.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ========================================== -->
+            <!-- SEÇÃO 5: RECONHECIMENTO & MÍDIA -->
+            <!-- ========================================== -->
+            <section class="space-y-8">
+                <header class="border-b border-brand-blue/20 pb-4">
+                    <h2 class="text-3xl font-bold text-white font-poppins">Reconhecimento e Mídia<span class="text-brand-blue">.</span></h2>
+                </header>
+                
+                <!-- MOSAICO REFORMULADO (DESTAQUES RÁPIDOS) -->
+                <div class="glass-card rounded-2xl p-6 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-blue/20 blur-[50px] rounded-full pointer-events-none"></div>
+                    <div class="flex items-center gap-2 mb-6 relative z-10">
+                        <span class="material-symbols-outlined text-brand-blue text-2xl">hub</span>
+                        <h3 class="font-poppins text-lg font-bold text-white uppercase tracking-wide">Destaques de Inovação</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
+                        <!-- Card 1 -->
+                        <div class="bg-brand-surface/60 border border-brand-blue/20 rounded-xl p-4 flex flex-col items-center text-center gap-2 hover:bg-brand-blue/10 transition-colors">
+                            <span class="material-symbols-outlined text-brand-blue text-3xl">forum</span>
+                            <h5 class="font-poppins font-bold text-white text-sm">Transparência Radical</h5>
+                            <span class="text-[10px] uppercase font-bold text-brand-text/50">Gov.MT</span>
+                            <p class="font-roboto text-xs text-brand-text/80 mt-1">Chatbot de Cidadania com 89,4% de aprovação.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-brand-surface/60 border border-brand-pink/20 rounded-xl p-4 flex flex-col items-center text-center gap-2 hover:bg-brand-pink/10 transition-colors">
+                            <span class="material-symbols-outlined text-brand-pink text-3xl">satellite_alt</span>
+                            <h5 class="font-poppins font-bold text-white text-sm">Segurança Inteligente</h5>
+                            <span class="text-[10px] uppercase font-bold text-brand-text/50">MPMT</span>
+                            <p class="font-roboto text-xs text-brand-text/80 mt-1">Predição de crime via satélite e mapas.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-brand-surface/60 border border-brand-green/20 rounded-xl p-4 flex flex-col items-center text-center gap-2 hover:bg-brand-green/10 transition-colors">
+                            <span class="material-symbols-outlined text-brand-green text-3xl">eco</span>
+                            <h5 class="font-poppins font-bold text-white text-sm">Agilidade Ambiental</h5>
+                            <span class="text-[10px] uppercase font-bold text-brand-text/50">SEMAD</span>
+                            <p class="font-roboto text-xs text-brand-text/80 mt-1">Risco de prescrição eliminado. SLA reduzido para 5 dias.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRÊMIO ISG (IMAGENS MAIORES) -->
+                <div class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-pink relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-pink/10 rounded-full blur-2xl"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative z-10">
+                        <div class="md:col-span-8">
+                            <h4 class="font-poppins text-2xl font-bold text-white leading-tight mb-6">
+                                Xertica é reconhecida como <span class="text-gradient-pink">Líder</span> em 3 quadrantes estratégicos da ISG.
+                            </h4>
+                            <div class="flex flex-wrap items-center gap-4 mb-6 pb-6 border-b border-brand-pink/10">
+                                <div class="bg-brand-surface/70 border border-brand-pink/20 rounded-lg p-3 shadow-lg hover:scale-105 transition-transform">
+                                    <img src="https://hvarconsulting.com.br/wp-content/uploads/2025/08/Google-Cloud-GenAI-and-AI-Services_Leader.png" alt="Selo ISG Provider Lens" class="h-20 w-auto object-contain">
+                                </div>
+                                <div class="bg-brand-surface/70 border border-brand-pink/20 rounded-lg p-3 shadow-lg hover:scale-105 transition-transform">
+                                    <img src="https://i.imgur.com/z41KPIH.png" alt="Selo ISG Provider Lens" class="h-20 w-auto object-contain">
+                                </div>
+                                <div class="bg-brand-surface/70 border border-brand-pink/20 rounded-lg p-3 shadow-lg hover:scale-105 transition-transform">
+                                    <img src="https://i.imgur.com/SXPkzJp.png" alt="Selo ISG Provider Lens" class="h-20 w-auto object-contain">
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">
+                                    A Xertica foi reconhecida como Líder em três quadrantes estratégicos no estudo <strong>ISG Provider Lens™ 2025 – Google Cloud Partner Ecosystem</strong> no Brasil.
+                                </p>
+                                <p class="font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">
+                                    Este reconhecimento reforça nossa excelência em soluções Google Cloud, nossa capacidade de entregar valor real aos clientes e o compromisso contínuo com inovação, desempenho e especialização técnica.
+                                </p>
+                                <p class="font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">
+                                    Ser <strong>3x Líder</strong> consolida nossa posição como um dos principais parceiros de transformação digital do país.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 flex flex-col gap-4 justify-center h-full">
+                            <!-- Foto Premiação -->
+                            <div class="relative group rounded-xl overflow-hidden border border-brand-pink/30 shadow-lg h-48 md:h-56">
+                                <img src="https://i.imgur.com/C1CJ3G3.jpeg" alt="Premiação ISG" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-3">
+                                    <span class="text-[10px] text-white/90 font-roboto uppercase tracking-wider">Premiação Oficial</span>
+                                </div>
+                            </div>
+                            <!-- Stat Box Compactado -->
+                            <div class="flex items-center justify-between bg-brand-surface/50 border border-brand-pink/30 rounded-xl p-4 w-full">
+                                <div class="flex flex-col text-left">
+                                     <span class="font-poppins font-bold text-2xl text-white leading-none">3x Líder</span>
+                                     <span class="text-[9px] text-brand-text/50 uppercase tracking-widest mt-1">ISG Provider Lens™</span>
+                                </div>
+                                <span class="material-symbols-outlined text-3xl text-brand-pink">workspace_premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NOVO PRÊMIO IMPACT GENERATION -->
+                <div class="glass-card rounded-2xl p-8 border-l-4 border-l-brand-blue relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-blue/10 rounded-full blur-2xl"></div>
+                    <div class="flex items-center gap-3 mb-6 relative z-10">
+                        <span class="material-symbols-outlined text-brand-blue text-2xl">campaign</span>
+                        <h3 class="font-poppins text-lg font-bold text-white uppercase tracking-wide">Marketing & Eficiência</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                        <div class="space-y-4">
+                            <h4 class="font-poppins text-xl font-bold text-white leading-tight">
+                                Conquistamos o Prêmio Impact Generation do Google Cloud! ✨🏆
+                            </h4>
+                            <div class="space-y-3 font-roboto text-xs text-brand-text/90 leading-relaxed text-justify">
+                                <p>
+                                    No Partner Marketing Efficiency Programs — Best of the Year 2025, fomos reconhecidos por transformar uma iniciativa interna em um modelo mensurável, sustentável e de alto impacto.
+                                </p>
+                                <p>
+                                    A "Maratona do Sucesso" evoluiu de um exercício cultural para um sistema de produtividade estratégica, combinando medição objetiva, incentivos inteligentes e alinhamento de equipe para impulsionar resultados reais.
+                                </p>
+                                <p class="font-medium text-white">
+                                    Obrigado ao Google Cloud e, especialmente, a toda a equipe da Xertica.ai: seu compromisso e criatividade tornaram essa conquista possível.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://i.imgur.com/NrOfcBg.jpeg" alt="Premio Impact Generation" class="w-full h-auto rounded-lg shadow-lg border border-brand-blue/20 hover:scale-105 transition-transform duration-300">
+                            <img src="https://i.imgur.com/caUGOXv.jpeg" alt="Premio Impact Generation Equipe" class="w-full h-auto rounded-lg shadow-lg border border-brand-blue/20 hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRID: GOOGLE CLOUD & IMPRENSA -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- GOOGLE CLOUD SOCIAL IMPACT -->
+                    <div class="glass-card rounded-2xl p-6 border-l-4 border-l-brand-green relative overflow-hidden flex flex-col h-full">
+                        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-green/10 rounded-full blur-2xl"></div>
+                        
+                        <div class="relative z-10 mb-4">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="material-symbols-outlined text-brand-green text-2xl">workspace_premium</span>
+                                <span class="font-poppins text-xs font-bold text-brand-green uppercase tracking-wider">Social Impact</span>
+                            </div>
+                            <h4 class="font-poppins text-xl font-bold text-white leading-tight">
+                                Tecnologia com Propósito: Google Cloud reconhece o impacto transformador da IA da Xertica na América Latina.
+                            </h4>
+                            <p class="font-roboto text-xs text-brand-text/70 mt-2">
+                                Tecnologia que moderniza o governo e impulsiona o impacto social.
+                            </p>
+                        </div>
+                        <div class="relative z-10 my-4 flex-grow">
+                            <img src="https://traveltechhub.com.br/_next/image?url=https%3A%2F%2Fcms.traveltechhub.com.br%2Fwp-content%2Fuploads%2F2025%2F04%2FWhatsApp-Image-2025-04-17-at-17.46.36.jpeg&w=1920&q=75" 
+                                 alt="Prêmio Google Cloud Social Impact" 
+                                 class="w-full h-48 md:h-64 object-cover rounded-lg shadow-lg border border-brand-green/20">
+                        </div>
+                        <div class="relative z-10 space-y-4">
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                A Xertica.ai consolidou sua liderança no mercado Govtech latino-americano ao receber o prêmio <strong>"Google Cloud Social Impact Partner of the Year – Technology for Good"</strong>. Este reconhecimento global atua como uma poderosa validação da nossa tese central.
+                            </p>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Nossas soluções provaram que é possível unir performance operacional e propósito humanitário. Receber este selo diretamente da infraestrutura do Google confirma ao mercado que nossas entregas não apenas geram valor público imediato, mas estabelecem um novo padrão de confiança.
+                            </p>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Em 2025, nossa atuação nos permitiu avançar de forma consistente em diferentes frentes estratégicas, o que se refletiu diretamente nas categorias para as quais nos aplicamos ao Partner of the Year de 2025.
+                            </p>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Submetemos nossa candidatura nas categorias Country, Public Sector, Artificial Intelligence, Google Workspace, Social Impact e Infrastructure Modernization, reunindo projetos que demonstram nossa capacidade de gerar impacto real por meio da tecnologia.
+                            </p>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Os casos apresentados — MPRS, TJES, SEMAD e Avalia Gov.MT — foram distribuídos ao longo dessas categorias, reforçando nossa atuação no setor público, a aplicação prática de inteligência artificial e o compromisso com iniciativas de impacto social.
+                            </p>
+                            <p class="font-roboto text-xs text-brand-text/80 leading-relaxed text-justify">
+                                Mais do que uma aplicação, essa escolha de categorias traduz nossa estratégia: crescer com consistência, entregar valor mensurável e ampliar o impacto positivo das soluções que levamos aos nossos clientes. É com essa base que seguimos construindo o caminho para 2026.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- IMPRENSA -->
+                    <div class="flex flex-col h-full space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 bg-brand-blue/20 rounded-lg text-brand-blue border border-brand-blue/30">
+                                <span class="material-symbols-outlined text-xl">newspaper</span>
+                            </div>
+                            <div>
+                                <h3 class="font-poppins text-lg font-bold text-white uppercase tracking-wide leading-none">Imprensa</h3>
+                                <span class="text-[10px] text-brand-text/50 font-roboto">Xertica na Mídia</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-4 flex-grow">
+                            <!-- Notícia 1 (IMAGEM ATUALIZADA) -->
+                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">
+                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-brand-surface rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10">
+                                    <img src="https://www.mprs.mp.br/media/areas/imprensa/midias_noticias/bvvyrfuktgdc.jpg" alt="Famurs" class="w-full h-full object-cover opacity-90 group-hover:opacity-100">
+                                </div>
+                                <div class="flex flex-col justify-between">
+                                    <div>
+                                        <span class="text-brand-blue text-[9px] font-bold uppercase mb-1 block">Portal Famurs</span>
+                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">
+                                            Famurs e Ministério Público avançam em nova ação para uso de inteligência artificial nas gestões municipais
+                                        </h4>
+                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">
+                                            Modernização dos sistemas de licitações com ferramentas digitais avançadas para ampliar a eficiência e transparência.
+                                        </p>
+                                    </div>
+                                    <a href="https://famurs.com.br/noticia/4141" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">
+                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Notícia 2 -->
+                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">
+                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-white rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10 shadow-sm">
+                                    <img src="https://i.imgur.com/ZielbnZ.png" alt="Governo RS" class="w-full h-full object-contain scale-110">
+                                </div>
+                                <div class="flex flex-col justify-between">
+                                    <div>
+                                        <span class="text-brand-pink text-[9px] font-bold uppercase mb-1 block">Estado RS</span>
+                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">
+                                            Comitiva conhece soluções de IA para segurança pública em agenda com a Xertica, em Nova York
+                                        </h4>
+                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">
+                                            Encontro focou em ferramentas para qualificação de inquéritos e gestão inteligente de chamadas de emergência.
+                                        </p>
+                                    </div>
+                                    <a href="https://www.estado.rs.gov.br/comitiva-conhece-solucoes-de-inteligencia-artificial-para-seguranca-publica-em-agenda-com-a-xertica-em-nova-york" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">
+                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Notícia 3 -->
+                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">
+                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-brand-surface rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10">
+                                    <img src="https://jornaldobras.com.br/images/noticias/69335/19050833_distinctio.jpg.jpg" alt="Communicator Awards" class="w-full h-full object-cover opacity-90 group-hover:opacity-100" onerror="this.src='https://placehold.co/100x100/121A2B/EBFAFF?text=Awards'">
+                                </div>
+                                <div class="flex flex-col justify-between">
+                                    <div>
+                                        <span class="text-brand-blue text-[9px] font-bold uppercase mb-1 block">Jornal do Brás</span>
+                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">
+                                            Volkswagen e Xertica.ai são premiadas no Communicator Awards com campanhas da LLYC
+                                        </h4>
+                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">
+                                            Projeto de Rebranding da Xertica recebe distinção internacional em design e estratégia de marca na edição 2025.
+                                        </p>
+                                    </div>
+                                    <a href="https://jornaldobras.com.br/noticia/69335/volkswagen-e-xertica-ia-sao-premiadas-no-communicator-awards-com-campanhas-da-llyc" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">
+                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Notícia 4 -->
+                            <div class="glass-card rounded-xl p-4 border border-brand-blue/10 hover:border-brand-blue/30 transition-colors flex flex-col sm:flex-row gap-4 group">
+                                <div class="w-full sm:w-24 h-32 sm:h-24 bg-brand-surface rounded-lg shrink-0 flex items-center justify-center overflow-hidden border border-brand-blue/10">
+                                    <img src="https://cms.traveltechhub.com.br/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-17-at-17.46.36.jpeg" alt="Prêmio Google Cloud" class="w-full h-full object-cover opacity-90 group-hover:opacity-100" onerror="this.src='https://placehold.co/100x100/121A2B/EBFAFF?text=Google+Cloud'">
+                                </div>
+                                <div class="flex flex-col justify-between">
+                                    <div>
+                                        <span class="text-brand-blue text-[9px] font-bold uppercase mb-1 block">Travel Tech Hub</span>
+                                        <h4 class="font-poppins text-sm font-bold text-white leading-tight mb-2 group-hover:text-brand-blue transition-colors">
+                                            Xertica.ai é premiada pelo Google Cloud por soluções de IA que geram impacto social
+                                        </h4>
+                                        <p class="font-roboto text-xs text-brand-text/70 line-clamp-2 leading-relaxed">
+                                            Reconhecimento como Social Impact Partner of the Year valida a união entre performance operacional e propósito humanitário na América Latina.
+                                        </p>
+                                    </div>
+                                    <a href="https://cms.traveltechhub.com.br/xertica-ai-e-premiada-pelo-google-cloud-por-solucoes-de-ia-que-geram-impacto-social-na-america-latina/upload/" target="_blank" class="inline-flex items-center gap-1 text-brand-blue text-[10px] font-bold hover:underline mt-2">
+                                        Ler mais <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEXTO FINAL DE ENCERRAMENTO -->
+                <div class="glass-card rounded-2xl p-8 border-t-4 border-t-brand-blue relative overflow-hidden mt-12">
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none -ml-16 -mb-16"></div>
+                    <div class="relative z-10 space-y-4">
+                        <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify">
+                            O impacto social apresentado neste relatório reflete um ano em que tecnologia e dignidade humana caminharam lado a lado. Em 2025, fortalecemos nossa equipe, aceleramos entregas estratégicas e ajudamos governos a transformar processos essenciais nas áreas de justiça, saúde, meio ambiente, habitação e transparência pública. Cada case demonstrou que inovação pode gerar resultados imediatos para a população — reduzindo filas, prevenindo riscos, acelerando decisões e democratizando o acesso à informação.
+                        </p>
+                        <p class="font-roboto text-sm text-brand-text/90 leading-relaxed text-justify font-medium">
+                            Em 2026, seguiremos ampliando esse compromisso, levando nossas soluções para novos Estados e instituições, e aprofundando nossa missão de gerar valor público real e mensurável para governos e cidadãos.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 border-t border-brand-text/10 bg-[#050B14] relative z-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="font-roboto text-xs text-brand-text/40">© 2025 Xertica.ai. Todos os direitos reservados.</span>
+            
+            <div class="flex items-center gap-3">
+                <img src="https://i.imgur.com/5Kp6iE8.jpeg" alt="Gustavo de Paula" class="w-10 h-10 rounded-full border border-brand-blue/30 object-cover">
+                <div class="flex flex-col">
+                    <span class="font-roboto text-[10px] text-brand-text/50 uppercase tracking-wider mb-0.5">Assinado por</span>
+                    <span class="font-poppins text-xs font-bold text-white">Gustavo de Paula</span>
+                    <span class="font-roboto text-[10px] text-brand-text/60">Country Manager, Xertica.ai</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
